@@ -15,6 +15,8 @@
     database = firebase.database();
  
     // VARIABLES
+var counter = 1;
+
     var employee = {
       employeeName:"",
       role:"",
@@ -23,17 +25,38 @@
     }
 
 
-    $("#addButton").on("click", function(){
+    $("#addButton").on("click", function(event){
+      event.preventDefault();
       employee.employeeName = $("#EmployeeName").val().trim();
       employee.role = $("#Role").val().trim();
       employee.startDate = $("#StartDate").val().trim();
       employee.monthlyRate = $("#MonthlyRate").val().trim();   
       
       database.ref("data/employee").push(employee);
+      createEmployeeRecord();
+
     })
 
     function createEmployeeRecord(){
-      
+      var rowRec = $("<tr>");
+      var th = $("<th>");
+      th.attr("scope","col");
+      th.text(counter);
+      var tdName = $("<td>");
+      tdName.text(employee.employeeName);
+      var tdRole =  $("<td>");
+      tdRole.text(employee.role)
+      var tdStartDate=  $("<td>");
+      tdStartDate.text(employee.startDate)
+      var tdMonthlyRate=  $("<td>");
+      tdMonthlyRate.text(employee.monthlyRate )
+      var tdMonthWorked =  $("<td>");
+      var tdPayment  =  $("<td>");
+
+      rowRec.append(th,tdName,tdRole,tdStartDate, tdMonthlyRate);
+      $("tbody").append(rowRec);
+
+
     }
 
 
