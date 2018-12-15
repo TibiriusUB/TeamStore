@@ -25,8 +25,9 @@
     // --------------------------------------------------------------------------------
 
     // On Click of Button
-    $("#click-button").on("click", function() {
+    $("#add-button").on("click", function() {
 
+      console.log("Add Button Clicked");
       // Add to clickCounter
       clickCounter++;
 
