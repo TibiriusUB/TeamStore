@@ -12,9 +12,33 @@
     
     firebase.initializeApp(config);
 
+    database = firebase.database();
+ 
     // VARIABLES
-    // --------------------------------------------------------------------------------
+    var employee = {
+      employeeName:"",
+      role:"",
+      startDate:"",
+      monthlyRate:0
+    }
 
+
+    $("#addButton").on("click", function(){
+      employee.employeeName = $("#EmployeeName").val().trim();
+      employee.role = $("#Role").val().trim();
+      employee.startDate = $("#StartDate").val().trim();
+      employee.monthlyRate = $("#MonthlyRate").val().trim();   
+      
+      database.ref("data/employee").push(employee);
+    })
+
+    function createEmployeeRecord(){
+      
+    }
+
+
+    // --------------------------------------------------------------------------------
+/*
     // Get a reference to the database service
     var database = firebase.database();
 
@@ -25,9 +49,8 @@
     // --------------------------------------------------------------------------------
 
     // On Click of Button
-    $("#add-button").on("click", function() {
+    $("#click-button").on("click", function() {
 
-      console.log("Add Button Clicked");
       // Add to clickCounter
       clickCounter++;
 
@@ -61,4 +84,4 @@
 
       // In case of error this will print the error
       console.log("The read failed: " + errorObject.code);
-    });
+    });*/
