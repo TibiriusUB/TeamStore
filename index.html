@@ -1,0 +1,76 @@
+<!-- Rutgers Coding BootCamp - Full Stack Developer - Mon/Wed -->
+<!-- Timesheet - In Class Group Project -->
+<!-- December 15, 2018 -->
+
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Timesheet</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container" style="margin-top: 10px; border: 1px;">
+        
+      <div class="jumbotron" style="border: 1px;">
+        
+        <div class="row" style="text-align:center;">
+          <div class="col-md-12">
+              <h2>Timesheet Title</h2>
+          </div>
+        </div>
+        <hr>
+        <div class="row" style="text-align:center;">
+          <h2>Report Table</h2>
+          <!-- Table Goes Here -->
+        </div>
+
+        <hr>
+        <div class="row" style="text-align:center;">
+          <h2>Entry Form Goes Here</h2>
+          <form>
+            <div class="form-group">
+                <label for="EmployeeName">Employee Name</label>
+                <input type="text" class="form-control" id="EmployeeName" placeholder="John Doe">
+              </div>
+              <div class="form-group">
+                <label for="Role">Role</label>
+                <input type="text" class="form-control" id="Role" placeholder="Sr. Manager">
+              </div>
+              <div class="form-group">
+                <label for="StartDate">Start Date</label>
+                <input type="text" class="form-control" id="StartDate" placeholder="01/01/2019">
+              </div>
+              <div class="form-group">
+                <label for="Monthly">Monthly Rate</label>
+                <input type="text" class="form-control" id="MonthlyRate" placeholder="65.00">
+              </div>
+              <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+          <!-- Form Goes Here -->
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12">
+              @Our Group, Rutgers Coding Bootcamp 2018.
+            </div>
+        </div>
+            
+      </div>
+
+    </div>
+
+    <script src="timesheet.js"></script>
+
+</body>
+</html>
